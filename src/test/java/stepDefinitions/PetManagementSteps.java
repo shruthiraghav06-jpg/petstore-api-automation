@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import context.ScenarioContext;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -122,5 +123,15 @@ public class PetManagementSteps {
 				.extract().response();
 
 		System.out.println("Response: " + response.asPrettyString());
+	}
+
+	@When("I add a pet with name {string} and status {string}")
+	public void iAddAPetWithNameAndStatus(String name , String available) {
+		System.out.println("I add a pet with name Bruno and status available");
+	}
+
+	@Then("the pet should be added successfully")
+	public void thePetShouldBeAddedSuccessfully() {
+		System.out.println("the pet should be added successfully");
 	}
 }
