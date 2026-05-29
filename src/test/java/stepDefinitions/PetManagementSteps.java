@@ -12,12 +12,12 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
-public class PetSteps {
+public class PetManagementSteps {
 
 	ScenarioContext scenarioContext;
 	Response response;
 
-	public PetSteps(ScenarioContext scenarioContext){
+	public PetManagementSteps(ScenarioContext scenarioContext){
 		this.scenarioContext = scenarioContext;
 	}
 
